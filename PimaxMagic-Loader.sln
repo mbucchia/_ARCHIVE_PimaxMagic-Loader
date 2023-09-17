@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PimaxMagic-Loader", "PimaxMagic-Loader.vcxproj", "{807F704E-4009-4B96-B860-EF7EB2429A81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{5D13BE4E-CE29-42AE-8366-9DCBEE90389F}"
+	ProjectSection(SolutionItems) = preProject
+		runtime\bin\install_pimaxmagic_loader.bat = runtime\bin\install_pimaxmagic_loader.bat
+		runtime\bin\uninstall_pimaxmagic_loader.bat = runtime\bin\uninstall_pimaxmagic_loader.bat
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{807F704E-4009-4B96-B860-EF7EB2429A81}.Debug|x64.ActiveCfg = Debug|x64
+		{807F704E-4009-4B96-B860-EF7EB2429A81}.Debug|x64.Build.0 = Debug|x64
+		{807F704E-4009-4B96-B860-EF7EB2429A81}.Release|x64.ActiveCfg = Release|x64
+		{807F704E-4009-4B96-B860-EF7EB2429A81}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D18596F9-2E2D-4DB4-A8C2-D96A4E7A1DFB}
+	EndGlobalSection
+EndGlobal

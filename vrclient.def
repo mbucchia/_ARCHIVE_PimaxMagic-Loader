@@ -1,0 +1,29 @@
+LIBRARY vrclient_x64
+EXPORTS
+	HmdSystemFactory						@1
+	VRApplications							@2
+	VRChaperone								@3
+	VRChaperoneSetup						@4
+	VRClientCoreFactory						@5
+	VRCompositor							@6
+	VRExtendedDisplay						@7
+	VRNotifications							@8
+	VROverlay								@9
+	VRRenderModels							@10
+	VRSettings								@11
+	VRSystem								@12
+	VRTrackedCamera							@13
+	VR_GetGenericInterface					@14
+	VR_GetInitToken							@15
+	VR_GetStringForHmdError					@16
+	VR_GetVRInitErrorAsEnglishDescription	@17
+	VR_GetVRInitErrorAsSymbol				@18
+	VR_Init									@19
+	VR_InitInternal							@20
+	VR_InitInternal2						@21
+	VR_IsHmdPresent							@22
+	VR_IsInterfaceVersionValid				@23
+	VR_IsRuntimeInstalled					@24
+	VR_RuntimePath							@25
+	VR_Shutdown								@26
+	VR_ShutdownInternal						@27
