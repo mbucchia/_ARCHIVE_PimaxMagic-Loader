@@ -8,7 +8,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{5D13BE4E-CE29-42AE-8366-9DCBEE90389F}"
 	ProjectSection(SolutionItems) = preProject
 		runtime\bin\install_pimaxmagic_loader.bat = runtime\bin\install_pimaxmagic_loader.bat
+		.github\workflows\msbuild.yml = .github\workflows\msbuild.yml
 		runtime\bin\uninstall_pimaxmagic_loader.bat = runtime\bin\uninstall_pimaxmagic_loader.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E84B399B-B1FC-46F4-BBB5-8B1FB39C58BF}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
