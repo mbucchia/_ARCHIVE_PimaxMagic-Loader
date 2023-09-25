@@ -26,11 +26,46 @@ Press any key to continue . . .
 
 ## Uninstalling and dealing with SteamVR updates
 
-TODO
+To make the program inactive and uninstall it:
+
+1) Locate the folder where SteamVR is installed. It typically is `C:\Program Files (x86)\Steam\steamapps\common\SteamVR`. Go to the `bin` folder under the SteamVR folder.
+
+2) With **SteamVR completely closed**, run `uninstall_pimaxmagic_loader.bat`. The successful output will show:
+
+```
+Reverting to original vrclient_x64.dll...
+Press any key to continue . . .
+```
+
+After a SteamVR update, it is necessary to re-activate the software:
+
+1) Locate the folder where SteamVR is installed. It typically is `C:\Program Files (x86)\Steam\steamapps\common\SteamVR`. Go to the `bin` folder under the SteamVR folder.
+
+2) With **SteamVR completely closed**, run `uninstall_pimaxmagic_loader.bat`. The successful output will show:
+
+```
+Reverting to original vrclient_x64.dll...
+Detected changes to vrclient_x64.dll... Assuming SteamVR was updated.
+Press any key to continue . . .
+```
+
+3) With **SteamVR completely closed**, run `install_pimaxmagic_loader.bat`. The successful output will show:
+
+```
+Injecting PimaxMagic-Loader...
+        1 file(s) copied.
+Press any key to continue . . .
+```
 
 ## Frequently Asked Questions (FAQ)
 
-TODO
+**Q:** Does it work with all games?
+
+**A:** I don't know. This program does not affect Pimax foveated rendering solution. There are certain games that simply cannot do foveated rendering with Pimax. This tool was primarily developed to enable Pimax foveated rendering in VRChat and was only tested with VRChat.
+
+**Q:** SteamVR does not start anymore.
+
+**A:** Perhaps some files were corrupted. Try doing a repair/reinstall of SteamVR from Steam.
 
 ## Troubleshooting
 
