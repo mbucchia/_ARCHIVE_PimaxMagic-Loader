@@ -12,3 +12,4 @@
 #include <thread>
 
 #include "openvr.h"
+#include "openxr_loader_interfaces.h"

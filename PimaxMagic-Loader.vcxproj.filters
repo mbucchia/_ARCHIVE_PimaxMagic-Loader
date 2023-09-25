@@ -27,5 +27,6 @@
     <None Include="vrclient.def">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

@@ -27,3 +27,4 @@ EXPORTS
 	VR_RuntimePath							@25
 	VR_Shutdown								@26
 	VR_ShutdownInternal						@27
+	xrNegotiateLoaderRuntimeInterface		@28

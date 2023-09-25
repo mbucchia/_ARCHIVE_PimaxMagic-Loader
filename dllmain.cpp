@@ -128,7 +128,7 @@ namespace {
 
     // Chain-load the real vrclient_x64.dll.
     HMODULE realVrClient = nullptr;
-    void LoadRealVrClient() {
+    void LoadRealVrClient(bool loadLibMagic = true) {
         static std::mutex realVrClientLoadMutex;
 
         std::unique_lock lock(realVrClientLoadMutex);
@@ -166,8 +166,10 @@ namespace {
 
         logging::Log("vrclient_x64 handle = %p\n", realVrClient);
 
-        // Initiate loading of Pimax Magic.
-        LoadLibMagic();
+        if (loadLibMagic) {
+            // Initiate loading of Pimax Magic.
+            LoadLibMagic();
+        }
     }
 
 } // namespace
@@ -200,6 +202,14 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     static decltype(&name) pfnRealFunc = nullptr;                                                                      \
     if (!pfnRealFunc) {                                                                                                \
         LoadRealVrClient();                                                                                            \
+        pfnRealFunc = (decltype(&name))GetProcAddress(realVrClient, #name);                                            \
+    }                                                                                                                  \
+    return pfnRealFunc(__VA_ARGS__);
+
+#define BRIDGE_FUNC_NO_LOAD(name, ...)                                                                                 \
+    static decltype(&name) pfnRealFunc = nullptr;                                                                      \
+    if (!pfnRealFunc) {                                                                                                \
+        LoadRealVrClient(false);                                                                                       \
         pfnRealFunc = (decltype(&name))GetProcAddress(realVrClient, #name);                                            \
     }                                                                                                                  \
     return pfnRealFunc(__VA_ARGS__);
@@ -314,4 +324,9 @@ void VR_CALLTYPE VR_Shutdown() {
 
 void VR_CALLTYPE VR_ShutdownInternal() {
     BRIDGE_FUNC(VR_ShutdownInternal);
+}
+
+XrResult XRAPI_CALL xrNegotiateLoaderRuntimeInterface(const XrNegotiateLoaderInfo* loaderInfo,
+                                                      XrNegotiateRuntimeRequest* runtimeRequest) {
+    BRIDGE_FUNC_NO_LOAD(xrNegotiateLoaderRuntimeInterface, loaderInfo, runtimeRequest);
 }
