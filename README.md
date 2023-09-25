@@ -4,6 +4,8 @@
 
 This utility lets you use the Pimax Foveated Rendering feature with games protected with Easy Anti-Cheat.
 
+# More details and instructions on the [the wiki](https://github.com/mbucchia/PimaxMagic-Loader/wiki)!
+
 ## Installing
 
 **PLEASE READ ALL THE INSTRUCTIONS BELOW CAREFULLY.**
@@ -70,3 +72,10 @@ Press any key to continue . . .
 ## Troubleshooting
 
 The log files are in the `%LocalAppData%\PimaxMagic-Loader` folder.
+
+## Special Thanks
+
+Huge thanks to [Omniwhatever](https://www.youtube.com/@Omniwhatever) for getting me to look into doing this and helping me brainstorming solutions and testing prerelease versions!
+
+Very special thanks to Pimax for providing me with a Pimax Crystal for development.
+
